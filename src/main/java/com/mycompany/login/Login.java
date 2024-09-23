@@ -50,6 +50,11 @@ public class Login {
         }
         return "Username and password successfully captured.";
     }
-    
+      //Method to verify User login Details 
+     public boolean loginUser(String enteredUsername, String enteredPassword){
+         return enteredUsername.equals(this.username) && enteredPassword.equals(this.password);
+         
+     }
+     
 }
 
