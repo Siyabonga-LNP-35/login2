@@ -42,14 +42,16 @@ public class Login {
     }
      //Method to register user 
     
-    public String  registerUser(){
-        if (!checkUserName()){
-            return "Username is not correctly formatted, please ensure that the usename contains an underscore and is no more than 5 characters in length.";         
-        }else if (!checkPasswordComplexity()){
-            return "Password is not correctly formatted, please ensure that the password contains at least 8 characters, a capital letter, a number, and spercial character.";
-        }
-        return "Username and password successfully captured.";
+    public String registerUser() {
+    if (!checkUserName()) {
+        return "Username is not correctly formatted, please ensure that the username contains an underscore and is no more than 5 characters in length.";
     }
+    if (!checkPasswordComplexity()) {
+        return "Password is not correctly formatted, please ensure that the password contains at least 8 characters, a capital letter, a number, and special character.";
+    }
+    return "Username and password successfully captured.";
+    }
+
       //Method to verify User login Details 
      public boolean loginUser(String enteredUsername, String enteredPassword){
          return enteredUsername.equals(this.username) && enteredPassword.equals(this.password);
